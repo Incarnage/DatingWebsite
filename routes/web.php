@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PreferenceController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -22,3 +24,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+Route::get('/preference', [PreferenceController::class, 'index'])->name('preference');
+

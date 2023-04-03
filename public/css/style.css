@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 body{
     background: url("../img/mainbg.jpg") no-repeat;
-    
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -48,6 +47,10 @@ h1,h2,h3,h4,h5,h6{
     background: #ebe7e1
 }
 
+.profile{
+    font-family: 'Quicksand', serif;
+
+}
 
 
 

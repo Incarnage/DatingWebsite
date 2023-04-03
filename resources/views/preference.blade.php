@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
-asas
+your preferences
 @endsection

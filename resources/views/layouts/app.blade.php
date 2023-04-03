@@ -62,24 +62,26 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item fw-bold" href="{{ route('logout') }}"
+                                    <a class="dropdown-item fw-bold fs-5" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <a class="dropdown-item fw-bold fs-3" href="{{ route('logout') }}" {{-- change logout to profile --}}
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('profile-form').submit();">
+                                    <a class="dropdown-item fw-bold fs-5" href="/profile">
                                         {{ __('Profile') }}
                                     </a>
+
+                                    <a class="dropdown-item fw-bold fs-5" href="/preference">
+                                        {{ __('Preference') }}
+                                    </a>
+
+                                    
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
-                                    <form id="profile-form" action="{{ route('logout') }}" method="POST" class="d-none"> {{-- change logout to profile --}}
-                                        @csrf
-                                    </form>
+                                   
                                 </div>
                             </li>
                         @endguest
