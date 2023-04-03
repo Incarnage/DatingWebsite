@@ -26,7 +26,7 @@
             <div class="container" >
             <div class="container-fluid">
                 <a class="navbar-brand fw-bold fs-3" href="/">
-                <img src="./img/Logo.png" alt="Logo" width="100" height="100" class="d-inline-block align-text-center">
+                <img src="./img/Logo.png" alt="Logo" width="150" height="150" class="d-inline-block align-text-center">
                 Ever After
                 </a>
   </div>
@@ -46,17 +46,17 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link fw-bold fs-5" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link fw-bold fs-3" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link fw-bold fs-5" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link fw-bold fs-3" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown fw-bold fs-5">
+                            <li class="nav-item dropdown fw-bold fs-3">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
@@ -68,7 +68,7 @@
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <a class="dropdown-item fw-bold" href="{{ route('logout') }}" {{-- change logout to profile --}}
+                                    <a class="dropdown-item fw-bold fs-3" href="{{ route('logout') }}" {{-- change logout to profile --}}
                                        onclick="event.preventDefault();
                                                      document.getElementById('profile-form').submit();">
                                         {{ __('Profile') }}

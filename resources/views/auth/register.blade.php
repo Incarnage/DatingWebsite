@@ -1,9 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+
+<div class=" rounded col-4 text-center m-auto  text-black ">
+<img src="./img/Logo.png" class="rounded mx-auto d-block" style="width: 200px" >
+<h1 class="text-center">Study,Date, & Find Matches</h1>
+    </div>  
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-6">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
 

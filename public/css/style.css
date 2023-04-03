@@ -24,13 +24,28 @@ h1,h2,h3,h4,h5,h6{
 .homePage{
     background: url("../img/pngwing.com.png") no-repeat;
     height: 82vh;
-    background-size: 600px;
+    background-size: 800px;
     background-position: right bottom;
     font-family: 'Cormorant Garamond', serif;
     
 }
+
+
+.homePage1{
+    background: url("../img/ChatPic1.png") no-repeat;
+    height: 82vh;
+    background-size: contain;
+    background-position: center;
+    font-family: 'Cormorant Garamond', serif;
+    text-align: right;
+    
+}
 .welcomePage{
     background: #ebe7e1 ;
+}
+
+.card-header{
+    background: #ebe7e1
 }
 
 
