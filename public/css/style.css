@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+body{
+    background: url("../img/mainbg.jpg") no-repeat;
+    
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Inter', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Quicksand', serif;
+}
+
+
+.navbar{
+    background:linear-gradient(180deg, #F8B0B0 0%, rgba(248, 176, 176, 0) 100%);
+    border-radius: 0px;
+    font-family: 'Cormorant Garamond', serif;
+    color: black;
+}
+
+.homePage{
+    background: url("../img/pngwing.com.png") no-repeat;
+    height: 82vh;
+    background-size: 600px;
+    background-position: right bottom;
+    font-family: 'Cormorant Garamond', serif;
+    
+}
+.welcomePage{
+    background: #ebe7e1 ;
+}
+
+
+
+
