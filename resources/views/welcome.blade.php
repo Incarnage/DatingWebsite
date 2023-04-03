@@ -26,7 +26,7 @@
             <div class="container" >
             <div class="container-fluid">
                 <a class="navbar-brand fw-bold fs-3" href="/">
-                <img src="./img/Logo.png" alt="Logo" width="100" height="100" class="d-inline-block align-text-center">
+                <img src="./img/Logo.png" alt="Logo" width="150" height="150" class="d-inline-block align-text-center">
                 Ever After
                 </a>
   </div>
@@ -46,29 +46,29 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link fw-bold fs-5" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link fw-bold fs-3" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link fw-bold fs-5" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link fw-bold fs-3" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown fw-bold fs-5">
+                            <li class="nav-item dropdown fw-bold fs-3">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item fw-bold" href="{{ route('logout') }}"
+                                    <a class="dropdown-item fw-bold fs-3" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <a class="dropdown-item fw-bold" href="{{ route('logout') }}" {{-- change logout to profile --}}
+                                    <a class="dropdown-item fw-bold fs-3" href="{{ route('logout') }}" {{-- change logout to profile --}}
                                        onclick="event.preventDefault();
                                                      document.getElementById('profile-form').submit();">
                                         {{ __('Profile') }}
@@ -87,15 +87,26 @@
                 </div>
             </div>
         </nav>
-            <div class="container-fluid homePage d-flex align-items-center">
-                <div class="col-2 text-left m-5   text-black p-2 fw-bold ">
-                    <h1 class="">Ever After:</h1>
-                    <p class="fs-5">A StuDate Website for Me & You</p>
+            
+            <div class="container-fluid  d-flex align-items-center homePage">
+            
+            <div class="col-5 text-end text-Black "style="height: 700px;">
+                <p class="fw-bolder fs-1">EVER AFTER:</p>
+                <p class=" fs-2 pb-5">A StuDate Website for Me & You</p>
+                <img src="./img/ChatPic1.png" style="width: 450px" >
+                
                 </div>
-                <div>    
-                <img src="./img/Chatpic1.png" class="m-1">
+            
+            <div class="col-1 text-center text-white pt-1  ps-5 ms-3 mt-1 " style="height: 800px;">
+                <img src="./img/Logo.png" class="align-top" style="width: 200px" >
+                
+                
                 </div>
+
+                
             </div>
+            
+            
         <main class="">
             @yield('contents')
         </main>
