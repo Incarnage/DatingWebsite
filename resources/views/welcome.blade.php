@@ -97,7 +97,7 @@
                 
                 </div>
             
-            <div class="col-1 text-center text-white pt-1  ps-5 ms-3 mt-1 " style="height: 800px;">
+            <div class="col-1 text-center text-white pt-1  ps-5 ms-2 mt-0 " style="height: 795px;">
                 <img src="./img/Logo.png" class="align-top" style="width: 200px" >
                 
                 
