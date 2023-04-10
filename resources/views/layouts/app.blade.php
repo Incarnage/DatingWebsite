@@ -26,7 +26,7 @@
             <div class="container" >
             <div class="container-fluid">
                 <a class="navbar-brand fw-bold fs-3" href="/">
-                <img src="./img/Logo.png" alt="Logo" width="150" height="150" class="d-inline-block align-text-center">
+                <img src="./img/Logo.png" alt="Logo" width="130" height="140" class="d-inline-block align-text-center">
                 Ever After
                 </a>
   </div>

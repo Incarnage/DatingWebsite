@@ -26,15 +26,16 @@
             <div class="container" >
             <div class="container-fluid">
                 <a class="navbar-brand fw-bold fs-3" href="/">
-                <img src="./img/Logo.png" alt="Logo" width="150" height="150" class="d-inline-block align-text-center">
-                Ever After
+                <img src="./img/Logo.png" alt="Logo" width="130" height="140" class="d-inline-block align-text-center">
+                EVER AFTER: A StuDate Website for Me & You
                 </a>
   </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="container collapse navbar-collapse w-50 p-3 fs-4 rounded-4" id="navbarSupportedContent" style="background-color: #F8B0B0">
+                    <div class="fw-bold m-auto ps-5">Have an account?</div>
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
 
@@ -45,14 +46,14 @@
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link fw-bold fs-3" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <li class="nav-item me-2">
+                                    <a class="nav-link fs-3 btn text-white m-0 pt-0 pb-0" role="button" style="background-color: #7C2222" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
-
+                            <!-- <div class="vr opacity-25" ></div> -->
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link fw-bold fs-3" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link fs-3 btn text-white m-0 pt-0 pb-0" role="button" style="background-color: #7C2222" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -88,22 +89,10 @@
             </div>
         </nav>
             
-            <div class="container-fluid  d-flex align-items-center homePage">
-            
-            <div class="col-5 text-end text-Black "style="height: 700px;">
-                <p class="fw-bolder fs-1">EVER AFTER:</p>
-                <p class=" fs-2 pb-5">A StuDate Website for Me & You</p>
-                <img src="./img/ChatPic1.png" style="width: 450px" >
-                
-                </div>
-            
-            <div class="col-1 text-center text-white pt-1  ps-5 ms-2 mt-0 " style="height: 795px;">
-                <img src="./img/Logo.png" class="align-top" style="width: 200px" >
-                
-                
-                </div>
-
-                
+            <div class="container-fluid d-flex align-items-center homePage">
+                <div class="col-5 text-end text-Black pt-5 mt-5" style="height: 600px">
+                    <img src="./img/ChatPic1.png" style="width: 450px" style="height: 600px">
+                </div> 
             </div>
             
             

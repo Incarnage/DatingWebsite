@@ -1,43 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
 body{
-    background: url("../img/mainbg.jpg") no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    font-family: 'Inter', sans-serif;
+    position: relative;
+    font-family: 'Inter', sans-serif; 
 }
 
+
 h1,h2,h3,h4,h5,h6{
+    position: relative;
     font-family: 'Quicksand', serif;
 }
 
-
+body::before {    
+    content: "";
+    background-image: url("../img/mainbg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.3;
+}
 .navbar{
+    position: relative;
     background:linear-gradient(180deg, #F8B0B0 0%, rgba(248, 176, 176, 0) 100%);
     border-radius: 0px;
     font-family: 'Cormorant Garamond', serif;
     color: black;
 }
 
+
 .homePage{
+    position: relative;
     background: url("../img/pngwing.com.png") no-repeat;
     height: 82vh;
     background-size: 800px;
     background-position: right bottom;
     font-family: 'Cormorant Garamond', serif;
-    
+
 }
 
 
 .homePage1{
+    position: relative;
     background: url("../img/ChatPic1.png") no-repeat;
     height: 82vh;
     background-size: contain;
     background-position: center;
     font-family: 'Cormorant Garamond', serif;
     text-align: right;
-    
+
 }
 .welcomePage{
     background: #ebe7e1 ;
@@ -48,6 +62,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .profile{
+    position: relative;
     font-family: 'Quicksand', serif;
 
 }

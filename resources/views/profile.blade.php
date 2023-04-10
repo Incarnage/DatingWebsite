@@ -2,34 +2,34 @@
 @section('content')
 
 
-<div class="container-fluid profile" style="height: 350px;">
-<div class="row">
+<div class="container-fluid profile" style="height: 300px;">
+<div class="row mt-5">
 <div class="col">
     <h2 class="text-start fw-bold pt-5 pb-0 mb-0">Photos</h2>
         
-        <h3 class="text-start   ">Upload photos in the order you like them to appear</h3>
+        <h3 class="text-start ">Upload photos in the order you like them to appear</h3>
     </div>
-  <div class="col-sm-3">
-  <img src="{{asset('img/hanni1.png')}}" class="rounded mx-auto d-block " alt="..." style="height: 370px;">
+  <div class="col">
+  <img src="{{asset('img/hanni1.png')}}" class="rounded m-auto p-auto d-block" alt="..." style="height: 250px;">
     
   </div>
-  <div class="col-sm-3">
-  <img src="{{asset('img/hanni2.jpg')}}" class=" rounded mx-auto d-block " alt="..." style="height: 370px;">
+  <div class="col">
+  <img src="{{asset('img/hanni2.jpg')}}" class=" rounded m-auto p-auto d-block " alt="..." style="height: 250px;">
   </div>
-  <div class="col-sm-3">
-  <img src="{{asset('img/hanni3.jpg')}}" class=" rounded mx-auto d-block " alt="..." style="height: 370px;">
+  <div class="col">
+  <img src="{{asset('img/hanni3.jpg')}}" class=" rounded m-auto p-auto d-block " alt="..." style="height: 250px;">
   </div>
 </div>
 </div>
 
 <div class="container-fluid profile">
-    <div class="row">
+    <div class="row mt-3">
         <div class="col-md-auto">
         <h2 class="text-start fw-bold  pb-0 mb-0">About Yourself</h2>
         
-        <h3 class="text-start   ">Tell us about yourself</h3>
+        <h3 class="text-start  ">Tell us about yourself</h3>
         </div>
-        <div class="col my-auto" >
+        <div class="col" >
         <hr style="height:10px;border-width:0;color:black;background-color:black">
         </div>
     </div>
@@ -377,7 +377,6 @@
   </div>
 </div>
 </div>
-
 
 
 
