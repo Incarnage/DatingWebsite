@@ -69,3 +69,6 @@ body::before {
 
 
 
+.carousel-inner {
+    margin: auto;
+  }

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Ever After') }}</title>
+    <title>@yield('title')</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-md navbar-light shadow-sm  ">
             <div class="container" >
             <div class="container-fluid">
-                <a class="navbar-brand fw-bold fs-3" href="/">
+                <a class="navbar-brand fw-bold fs-3" href="/home">
                 <img src="./img/Logo.png" alt="Logo" width="130" height="140" class="d-inline-block align-text-center">
                 Ever After
                 </a>
@@ -45,14 +45,14 @@
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link fw-bold fs-3" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <li class="nav-item me-2">
+                                    <a class="nav-link fs-3 btn text-white m-0 pt-0 pb-0" role="button" style="background-color: #7C2222" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
-
+                            <!-- <div class="vr opacity-25" ></div> -->
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link fw-bold fs-3" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link fs-3 btn text-white m-0 pt-0 pb-0" role="button" style="background-color: #7C2222" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
@@ -68,20 +68,18 @@
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <a class="dropdown-item fw-bold fs-5" href="/profile">
+                                    <a class="dropdown-item fw-bold fs-5" href="/profile" class="request()->('profile')">
                                         {{ __('Profile') }}
                                     </a>
 
-                                    <a class="dropdown-item fw-bold fs-5" href="/preference">
+                                    <a class="dropdown-item fw-bold fs-5" href="/preference"  class="request()->('preference')">
                                         {{ __('Preference') }}
                                     </a>
-
-                                    
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
-                                   
+                                    
                                 </div>
                             </li>
                         @endguest

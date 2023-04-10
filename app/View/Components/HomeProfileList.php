@@ -4,18 +4,22 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class ProfileUser extends Component
+class HomeProfileList extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
-    {
-        //
-    }
 
+     public $profiles;
+    
+    
+
+     public function __construct($profiles)
+     {
+         $this->profiles = $profiles;
+     }
     /**
      * Get the view / contents that represent the component.
      *
@@ -23,6 +27,6 @@ class ProfileUser extends Component
      */
     public function render()
     {
-        return view('components.profile-user');
+        return view('components.home-profile-list');
     }
 }
