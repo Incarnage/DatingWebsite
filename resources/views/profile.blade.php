@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title','Profile')
 @section('content')
 
 
@@ -9,18 +10,11 @@
         
         <h3 class="text-start ">Upload photos in the order you like them to appear</h3>
     </div>
-  <div class="col">
-  <img src="{{asset('img/hanni1.png')}}" class="rounded m-auto p-auto d-block" alt="..." style="height: 250px;">
-    
-  </div>
-  <div class="col">
-  <img src="{{asset('img/hanni2.jpg')}}" class=" rounded m-auto p-auto d-block " alt="..." style="height: 250px;">
-  </div>
-  <div class="col">
-  <img src="{{asset('img/hanni3.jpg')}}" class=" rounded m-auto p-auto d-block " alt="..." style="height: 250px;">
-  </div>
+
+    <x-profile-list :profiles="$profile" ></x-profile-list>
 </div>
 </div>
+
 
 <div class="container-fluid profile">
     <div class="row mt-3">

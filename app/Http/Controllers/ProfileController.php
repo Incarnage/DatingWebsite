@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Profile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
@@ -14,7 +15,21 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('profile');
+        //gets the id of the authenticated user
+        $user = Auth::user();
+        // get all the products
+        $profiles = Profile::all();
+        // if there is an authenticated user, check if admin
+        // if yes, get only the products with his id
+        
+            
+                
+                $profiles = Profile::where('user_id', '=', $user->id)->get();
+            
+        
+        //pass the data to the view
+        return view('profile', ['profile' => $profiles]);
+
     }
 
     /**

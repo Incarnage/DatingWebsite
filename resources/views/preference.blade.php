@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title','Preference')
 @section('content')
 
 <div class="container-fluid hero-section profile">
