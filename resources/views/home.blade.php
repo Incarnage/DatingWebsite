@@ -5,6 +5,9 @@
 
 
 
-    <x-home-profile-list :profiles="$profile"></x-home-profile-list>
+  <x-home-profile-list :profiles="$profile"></x-home-profile-list>
+
+
+  
 
 @endsection

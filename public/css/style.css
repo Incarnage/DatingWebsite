@@ -72,3 +72,16 @@ body::before {
 .carousel-inner {
     margin: auto;
   }
+
+.ilist{
+    color: black;
+    font-size: 25px;
+}
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
+
+.navbar-nav .active{
+    border-bottom: #285430 solid 3px;
+}

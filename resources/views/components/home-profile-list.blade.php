@@ -1,5 +1,6 @@
 
 @foreach($profiles as $profile)
+<div class="col-4 m-auto ">
 <div id="carouselExampleCaptions" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -8,19 +9,19 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{{ asset('/img/'.$profile->img1)}}" class="" alt="...">
+      <img src="{{ asset('/img/'.$profile->img1)}}" class="rounded m-auto p-auto d-block" alt="..." style="height: 450px;">
       <div class="carousel-caption d-none d-md-block">
         
       </div>
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('/img/'.$profile->img2)}}" class="" alt="...">
+      <img src="{{ asset('/img/'.$profile->img2)}}" class="rounded m-auto p-auto d-block" alt="..." style="height: 450px;">
       <div class="carousel-caption d-none d-md-block">
         
       </div>
     </div>
     <div class="carousel-item">
-      <img src="{{ asset('/img/'.$profile->img3)}}" class="" alt="...">
+      <img src="{{ asset('/img/'.$profile->img3)}}" class="rounded m-auto p-auto d-block" alt="..." style="height: 450px;">
       <div class="carousel-caption d-none d-md-block">
         
       </div>
@@ -35,6 +36,51 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+</div>
+
+<div class="row bg-secondary col-10 mx-auto rounded">
+  <div class="col-3">
+    <div class="container-fluid hero-section d-flex align-items-center">
+    <div class="text-center m-auto p-5 ">
+        <h1 class="mb-4 fw-bold">Interests:</h1>
+        <ul class="ilist">
+          <li>Cosplay</li>
+          <li>Origami</li>
+          <li>Science</li>
+        </ul>
+    </div>
+    </div>
+  </div>
+  <div class="col-1 m-auto">
+        <a href="#" class="btn btn-danger btn-lg rounded-circle"><i class="fa fa-heart"></i></a>
+  </div>
+  <div class="col-3">
+    <div class="d-flex align-items-center">
+    <div class="text-center m-auto p-5 ">
+        <h1 class="mb-4 fw-bold text-uppercase ">{{$profile->nickname}}, 19</h1>
+        <p class="mb-4 fs-4">{{$profile->bio}}</p>
+        <p class="mb-4 fs-4">{{$profile->course}} </p>
+        <p class="mb-1 fs-4">Ateneo De Naga University </p>
+    </div>
+    </div>
+  </div>
+  <div class="col-1 m-auto">
+  <a href="#" class="btn btn-danger btn-lg rounded-circle"><i class="fa fa-close"></i></a>
+  </div>
+  <div class="col-3">
+    <div class="container-fluid hero-section d-flex align-items-center">
+    <div class="text-center m-auto p-5 ">
+    <h1 class="mb-4 fw-bold">Hobbies:</h1>
+        <ul class="ilist">
+          <li>Cooking</li>
+          <li>Reading</li>
+          <li>Gaming</li>
+        </ul>
+    </div>
+    </div>
+  </div>
+</div>
+
 
 
 @endforeach

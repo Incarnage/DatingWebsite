@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -24,7 +25,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm  ">
             <div class="container" >
-            <div class="container-fluid">
+            <div class="col-3">
                 <a class="navbar-brand fw-bold fs-3" href="/home">
                 <img src="./img/Logo.png" alt="Logo" width="130" height="140" class="d-inline-block align-text-center">
                 Ever After
@@ -36,12 +37,15 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item fw-bold fs-3 m-2"><a href="/home" class="nav-link {{request()->is('/home') ? 'active' : ''}}">Home</a></li>
+                        <li class="nav-item fw-bold fs-3 m-2"><a href="/likedyou" class="nav-link {{request()->is('/likedyou') ? 'active' : ''}}">Liked You</a></li>
+                        <li class="nav-item fw-bold fs-3 m-2"><a href="/studybuddy" class="nav-link {{request()->is('/studybuddy') ? 'active' : ''}}">Study Buddy</a></li>
+                        <li class="nav-item fw-bold fs-3 m-2"><a href="/matches" class="nav-link {{request()->is('/matches') ? 'active' : ''}}">Matches</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav mx-auto">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
