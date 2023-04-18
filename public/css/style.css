@@ -11,18 +11,7 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'Quicksand', serif;
 }
 
-body::before {    
-    content: "";
-    background-image: url("../img/mainbg.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.3;
-}
+
 .navbar{
     position: relative;
     background:linear-gradient(180deg, #F8B0B0 0%, rgba(248, 176, 176, 0) 100%);
@@ -83,5 +72,5 @@ body::before {
 }
 
 .navbar-nav .active{
-    border-bottom: #285430 solid 3px;
+    border-bottom:  #e02f2f solid 3px;
 }
