@@ -1,5 +1,8 @@
 
 @foreach($profiles as $profile)
+@if ($profile->id == 1)
+        @continue
+    @endif
 <div class="col-4 m-auto ">
 <div id="carouselExampleCaptions" class="carousel slide">
   <div class="carousel-indicators">
@@ -44,9 +47,9 @@
     <div class="text-center m-auto p-5 ">
         <h1 class="mb-4 fw-bold">Interests:</h1>
         <ul class="ilist">
-          <li>Cosplay</li>
-          <li>Origami</li>
-          <li>Science</li>
+          <li>{{$profile->interest1}}</li>
+          <li>{{$profile->interest2}}</li>
+          <li>{{$profile->interest3}}</li>
         </ul>
     </div>
     </div>
@@ -60,7 +63,7 @@
         <h1 class="mb-4 fw-bold text-uppercase ">{{$profile->nickname}}, 19</h1>
         <p class="mb-4 fs-4">{{$profile->bio}}</p>
         <p class="mb-4 fs-4">{{$profile->course}} </p>
-        <p class="mb-1 fs-4">Ateneo De Naga University </p>
+        <p class="mb-1 fs-4">{{$profile->school}} </p>
     </div>
     </div>
   </div>
@@ -72,15 +75,13 @@
     <div class="text-center m-auto p-5 ">
     <h1 class="mb-4 fw-bold">Hobbies:</h1>
         <ul class="ilist">
-          <li>Cooking</li>
-          <li>Reading</li>
-          <li>Gaming</li>
+          <li>{{$profile->hobbies1}}</li>
+          <li>{{$profile->hobbies2}}</li>
+          <li>{{$profile->hobbies3}}</li>
         </ul>
     </div>
     </div>
   </div>
 </div>
-
-
 
 @endforeach

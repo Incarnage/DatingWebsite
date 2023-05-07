@@ -25,7 +25,36 @@ class ProfileSeeder extends Seeder
             'nickname'=>"admin",
             'bio'=>"Test Bio",
             'course'=>"BSIT",
+            'school'=>"Ateneo De Naga University",
+            'age'=>19,
+            'height'=>"5'11",
+            'hobbies1'=>"Cooking",
+            'hobbies2'=>"Reading",
+            'hobbies3'=>"Gaming",
+            'interest1'=>"Cosplay",
+            'interest2'=>"Origami",
+            'interest3'=>"Science",
+            
+                    ]);
 
-        ]);
+                    Profile::create([
+                        'user_id'=>2,
+                        'img1'=>"chaewon1.jpeg",
+                        'img2'=>"chaewon2.jpg",
+                        'img3'=>"chaewon3.jpeg",
+                        'nickname'=>"admin",
+                        'bio'=>"Test Bio",
+                        'course'=>"BSIT",
+                        'school'=>"Ateneo De Naga University",
+                        'age'=>19,
+                        'height'=>"5'11",
+                        'hobbies1'=>"Cooking",
+                        'hobbies2'=>"Reading",
+                        'hobbies3'=>"Gaming",
+                        'interest1'=>"Cosplay",
+                        'interest2'=>"Origami",
+                        'interest3'=>"Science",
+                        
+                                ]);
     }
 }

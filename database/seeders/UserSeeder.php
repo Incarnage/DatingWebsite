@@ -24,5 +24,14 @@ class UserSeeder extends Seeder
             'password'=>Hash::make('admin')
 
         ]);
+
+        User::create([
+            'id'=>2,
+            'name'=>"admin1",
+            'email'=>"admi2n@m.c",
+            'email_verified_at'=>Carbon::now(),
+            'password'=>Hash::make('admin')
+
+        ]);
     }
 }

@@ -22,6 +22,15 @@ class CreateProfilesTable extends Migration
             $table->string("nickname");
             $table->string("bio");
             $table->string("course");
+            $table->string("school");
+            $table->unsignedBigInteger("age");
+            $table->string("height");
+            $table->string("hobbies1");
+            $table->string("hobbies2");
+            $table->string("hobbies3");
+            $table->string("interest1");
+            $table->string("interest2");
+            $table->string("interest3");
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');

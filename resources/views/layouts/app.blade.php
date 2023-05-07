@@ -40,8 +40,8 @@
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item fw-bold fs-3 m-2"><a href="/home" class="nav-link {{request()->is('home') ? 'active' : ''}}">Home</a></li>
                         <li class="nav-item fw-bold fs-3 m-2"><a href="/likedyou" class="nav-link {{request()->is('likedyou') ? 'active' : ''}}">Liked You</a></li>
-                        <li class="nav-item fw-bold fs-3 m-2"><a href="/studybuddy" class="nav-link {{request()->is('studybuddy') ? 'active' : ''}}">Study Buddy</a></li>
-                        <li class="nav-item fw-bold fs-3 m-2"><a href="/matches" class="nav-link {{request()->is('matches') ? 'active' : ''}}">Matches</a></li>
+                        <li class="nav-item fw-bold fs-3 m-2"><a href="/chatify" class="nav-link {{request()->is('studybuddy') ? 'active' : ''}}">Study Buddy</a></li>
+                        <li class="nav-item fw-bold fs-3 m-2"><a href="/chatify" class="nav-link {{request()->is('matches') ? 'active' : ''}}">Matches</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -94,7 +94,9 @@
 
         <main class="">
             @yield('content')
+            
         </main>
     </div>
 </body>
+@yield('javascript')
 </html>

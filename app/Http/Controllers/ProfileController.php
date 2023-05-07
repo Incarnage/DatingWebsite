@@ -24,11 +24,11 @@ class ProfileController extends Controller
         
             
                 
-                $profiles = Profile::where('user_id', '=', $user->id)->get();
+                $profiles = Profile::where('user_id', '!=', $user->id)->get();
             
         
         //pass the data to the view
-        return view('profile', ['profile' => $profiles]);
+        return view('profile', ['profile' => $profiles,]);
 
     }
 
@@ -39,7 +39,19 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        //
+        $user = Auth::user();
+        // get all the products
+        $profiles = Profile::all();
+        // if there is an authenticated user, check if admin
+        // if yes, get only the products with his id
+        
+            
+                
+                $profiles = Profile::where('user_id', '=', $user->id)->get();
+            
+        
+        //pass the data to the view
+        return view('profile', ['profile' => $profiles]);
     }
 
     /**
@@ -50,7 +62,13 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $profile = Profile::create([
+            'nickname' => $request['nickname'],
+            'user_id' => Auth::id()
+        ]);
+        return redirect('profile');
+
     }
 
     /**

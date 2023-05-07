@@ -28,6 +28,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+Route::get('/profile', [ProfileController::class, 'create'])->name('addprofile');
+Route::post('/profile/store', [ProfileController::class, 'store'])->name('store');
+
 Route::get('/preference', [PreferenceController::class, 'index'])->name('preference');
 Route::get('/likedyou', [LikedYouController::class, 'index'])->name('likedyou');
 Route::get('/matches', [MatchesController::class, 'index'])->name('matches');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Profile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -24,6 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+      
         $profiles = Profile::all();
         return view('home', ['profile' => $profiles]);
     }
